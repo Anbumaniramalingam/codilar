@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Profile Card</title>
+  <style>
+	@font-face {
+	  font-family: KumbhSans;
+	  src: url(css/font/KumbhSans-Regular.ttf);
+	}
+	*{	
+		margin: 0px;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 400;
+		padding:0px;
+		color: #242424;
+		font-family: KumbhSans;
+	}
+	body{
+		background: linear-gradient(45deg,  rgb(159 218 230),rgb(4 108 153));
+		overflow: hidden;
+	}
+	h5, .count{
+		font-size: 18px; 
+		line-height: 22px;
+		font-weight: 700;
+	}
+	body:before{
+		content: '';
+		display: inline-block;
+		width: 100%;
+		left: -50%;
+		top: -50%;
+		height:100%;
+		position: absolute;
+		background: linear-gradient(45deg, rgb(4 108 153), rgb(159 218 230));
+		border-radius: 50%;
+		z-index:-1;
+	}
+	body:after{
+		content: '';
+		display: inline-block;
+		width:100%;
+		bottom: -50%;
+		right: -50%;
+		height: 100%;
+		position: absolute;
+		background: linear-gradient(45deg, rgb(4 108 153), rgb(159 218 230));
+		border-radius: 50%;
+		z-index:-1;
+	}
+	.container{
+		width: 340px;
+		background: #fff;
+		margin: 200px auto;
+		z-index:9;
+		border-radius: 20px;
+		overflow: hidden
+	}
+	.top{
+		height: 140px;
+		background-image: url(img/slider.png)
+	}
+	.line{
+		border-top: 1px solid #ccc;
+		margin-top: 20px;
+		padding: 10px 0px;
+	}
+	.bottom{
+		padding-top: 70px;
+		position: relative;
+		text-align: center;
+	}
+	.bottom img{
+		position: absolute;
+		top: -54px;
+		left: 31%;
+		padding-bottom: 20px;
+	}
+	.line span{
+		display: inline-block;
+		width: 32.3%;
+		padding: 15px;
+		box-sizing: border-box
+	}
+	.line label{display: block;}
+
+  </style>
+</head>
+<body>
+	<div class='container'>
+		<div class='top'>
+				
+			
+		</div>
+		<div class='bottom'>
+			<div>
+				<img src='img/profile.png' alt='' title=''>
+				
+					<h5>Victor Crest <span class='age'> 26</span></h5>
+					<label>London</label>
+				</span>
+			</div>
+			<div class='line'>
+				<span>
+					<label class='count'>80K</label>
+					<label>Followers</label>
+				</span>
+				<span>
+					<label class='count'>803K</label>
+					<label>Likes</label>
+				</span>
+				<span>
+					<label class='count'>1.4K</label>
+					<label>Photos</label>
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

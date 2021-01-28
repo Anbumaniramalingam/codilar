@@ -1,0 +1,115 @@
+	@font-face {
+	  font-family: KumbhSans;
+	  src: url(font/KumbhSans-Regular.ttf);
+	}
+	
+	*{	
+		margin: 0px;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 400;
+		padding:0px;
+		font-family: KumbhSans;
+		color: #242424;
+	}
+	body{
+		background: linear-gradient(rgb(182 117 248), rgb(108 106 248));
+	}
+	h1{
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 700;
+		padding-top : 50px;
+		padding-bottom: 10px;
+	}
+	h3:hover{
+		color:#f47c57;
+		cursor: pointer;
+	}
+	h3:after{
+		content: '';
+		display: inline-block;
+		background-image: url(../images/icon-arrow-down.svg);
+		height: 10px;
+		background-repeat: no-repeat;
+		width: 10px;
+		position: absolute;
+		right: 9px;
+		top: 23px;
+	}
+	.container{
+		background: #f7f7f7;
+		width: 920px;
+		margin:  150px auto;
+		border-radius: 20px;
+		}
+	.row{
+		overflow: hidden;
+		clear: both;
+	}
+	.rightside, .leftside{
+		float: left;
+		display: inline-block;
+		width: 460px;
+		height: 512px;
+		}
+	.leftside{
+		background-image: url(../images/bg-pattern-desktop.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-x: -252px;
+	}
+	.img1{
+		padding: 130px 0px;
+		margin-left: -77px;
+	}
+	.img2{
+			position: absolute;
+		left: 215px;
+		z-index: 999999;
+		top: 406px;
+		overflow: visible;
+	}
+	.accordion{
+		padding: 20px 100px 0px 0px;
+	}
+	.accordion_block{
+		padding-bottom: 20px;
+		padding-top: 20px;
+		border-bottom: 1px solid #e7e7e9;
+		position: relative;
+	}
+	.accordion_block p{display: none;}
+	.accordion_block.active p{display: block;}
+	.accordion_block.active h3{font-weight: 700;padding-bottom: 20px;}
+	.active h3:after{transform: rotate(180deg);}
+	.leftside_mobile{
+		height: 106px;
+		display: none;
+		background-image: url(../images/bg-pattern-mobile.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
+	}
+	
+	@media only screen and (max-width: 375px) {
+		h1{text-align:center;}
+		.leftside_mobile{
+			display: block;
+		}
+		.leftside{display: none;}
+		.container{
+			width: 300px;
+		}
+		.rightside, .leftside{
+		width: 100%;
+		height: auto;
+		}
+		.accordion{padding: 20px;}
+		.leftside_mobile .img1 {
+			padding: 0px 0px; 
+			margin-left: 0px; 
+			position: absolute;
+			top: 43px;
+		}
+	}
